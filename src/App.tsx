@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react'
 import './App.css'
 
 /* interface CardProps {
@@ -33,13 +34,37 @@ function Card({ text, title }:CardProps) {
   </div>
 }
 
+function FileUpload(){
+  
+  const onFileUploaded = async (e:ChangeEvent<HTMLInputElement>) => {
+
+    const [file] = e.currentTarget.files!
+
+    const fileTextContent = await file.text()
+
+
+    console.log(fileTextContent)
+
+  }
+
+  return <>
+  
+  <div>
+    <input onChange={onFileUploaded} type="file" />
+    <div></div>
+  </div>
+  
+  </>
+}
+
 function App() {
   
   return (
     <>
       
       <h1>Fullstack 1</h1>
-      <Card text={'Lauri on ihan nössö kun ei oo tunnilla'} title={'#1'}></Card>
+      <FileUpload></FileUpload>
+      <Card text={'laatikko 1'} title={'#1'}></Card>
       <Card text={'laatikko 2'} title={'#2'}></Card>
       <Card text={'laatikko 3'} title={'#3'}></Card>
 
