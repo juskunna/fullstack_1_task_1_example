@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       
-      <h1>Fullstack 1 harjoitus</h1>
+      <h1>Fullstack 1</h1>
       <Card text={'laatikko 1'} title={'#1'}></Card>
       <Card text={'laatikko 2'} title={'#2'}></Card>
       <Card text={'laatikko 3'} title={'#3'}></Card>
